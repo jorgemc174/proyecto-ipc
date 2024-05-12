@@ -66,14 +66,12 @@ public class AvataresController implements Initializable {
     }    
 
     @FXML
-    private void vueltaLogin(ActionEvent event) throws IOException  {
-        FXMLLoader loader= new  FXMLLoader(getClass().getResource("/vista/Registro.fxml"));
-        Parent root = loader.load();
-                Scene scene = new Scene(root);
-                Stage stage = new Stage();
-                stage.initModality(Modality.APPLICATION_MODAL);
-                stage.setScene(scene);
-                stage.showAndWait(); 
+    private void vueltaLogin() {
+        // Obtener la referencia a la ventana actual
+        Stage stage = (Stage) Bardilla.getScene().getWindow();
+        // Cerrar la ventana
+        stage.close();
     }
     
 }
+
